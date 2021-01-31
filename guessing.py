@@ -69,7 +69,7 @@ def playGame():
 
             guessNumber = settings(input(f"\nGuess a number between {startNum} and {endNum} "), "number", startNum)
 
-        print(f"{guessNumber} is the number. You Win!")
+        print(f"{guessNumber} is the number. YOU GOT IT!")
         print(f"Good job, {playerList[i]}")
     print("*" * 50)
 
