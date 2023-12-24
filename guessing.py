@@ -26,8 +26,8 @@ def playGame():
     numPlayers = settings(input("\nEnter number of Players (+ve integer above 0): "), "number of players", 1)
 
     for i in range(1, numPlayers + 1):
+
         # --- create surfix for i(example: if i=1, surfix = 1st; i=2, surfix = nd) ---#
-        # surfix =(i==1)*"st" + (i==2)*"nd" + (i==3)*"rd" or "th"
         if i % 10 == 1:
             if i != 11:
                 surfix = "st"
@@ -69,7 +69,7 @@ def playGame():
 
             guessNumber = settings(input(f"\nGuess a number between {startNum} and {endNum} "), "number", startNum)
 
-        print(f"{guessNumber} is the number. You Win!")
+        print(f"{guessNumber} is the number. You Got It!")
         print(f"Good job, {playerList[i]}")
     print("*" * 50)
 
@@ -82,11 +82,11 @@ def playGame():
     if len(winnerList) > 1:
         print("\nDRAW BETWEEN THE FOLLOWING:")
         for name in winnerList:
-            print(name, end=" ")
+            print(name)
     else:
         print(f"\nThe winner is {winnerList[0]}")
 
-    print()
+    print("\n*** SCORE BOARD ***")
     for name, score in zip(playerList, scoreList):
         txt = (score > 1) * "guesses" or "guess"
         print(f"{name}: {score} wrong {txt}")
